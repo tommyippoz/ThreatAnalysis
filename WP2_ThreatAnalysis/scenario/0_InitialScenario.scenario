@@ -1,0 +1,18 @@
+* Additions
+
+* Components
+ADD,PP,Power Plant
+ADD,F,Factory
+ADD,SH,SH 1
+ADD,PS,Substation 1
+
+* Connections
+ADD,EC,C_F_PS,Factory;Substation 1
+ADD,EC,C_PP_PS,Power Plant;Substation 1
+ADD,EC,C_SH,SH 1;C_PP_PS
+
+* Remotions
+
+* Components
+
+* Connections

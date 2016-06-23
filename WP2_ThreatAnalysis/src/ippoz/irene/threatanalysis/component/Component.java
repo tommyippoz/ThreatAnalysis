@@ -25,4 +25,35 @@ public abstract class Component {
 		return compType;
 	}
 
+	public static ComponentCategory getCategoryOf(ComponentType cType) {
+		switch(cType){
+			case CP:
+			case AP:
+			case DES:
+			case F:
+			case H:
+			case LRC:
+			case O:
+			case OD:
+			case PS:
+			case S:
+			case SB:
+			case SH:
+				return ComponentCategory.BLD;
+			case BDC:
+			case SCADA:
+				return ComponentCategory.DAC;
+			case DC:
+			case EC:
+			case MG:
+				return ComponentCategory.CON;
+			case PP:
+			case PVG:
+			case WF:
+				return ComponentCategory.EP;
+			default:
+				return null;
+		}
+	}
+
 }

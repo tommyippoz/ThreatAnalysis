@@ -29,7 +29,9 @@ public class ThreatManager {
 	
 	public ThreatManager(String fileFolder){
 		loadThreatList(new File(fileFolder + "/Threats.csv"));
+		AppLogger.logInfo(getClass(), "Threat Library: " + threatList.size() + " threats");
 		loadMitigationList(new File(fileFolder + "/Mitigations.csv"));
+		AppLogger.logInfo(getClass(), "Mitigation Library: " + mitigationList.size() + " threats");
 		loadThreatMitigations(new File(fileFolder + "/Threat_Mitigations.csv"));
 		loadComponentThreats(new File(fileFolder + "/Component_Threat.csv"));
 		loadCategoryThreats(new File(fileFolder + "/Category_Threat.csv"));
