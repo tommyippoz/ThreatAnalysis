@@ -3,7 +3,6 @@
  */
 package ippoz.irene.threatanalysis.threats;
 
-import ippoz.irene.threatanalysis.component.Component;
 import ippoz.irene.threatanalysis.component.ComponentCategory;
 import ippoz.irene.threatanalysis.component.ComponentType;
 import ippoz.irene.threatanalysis.utility.AppLogger;
