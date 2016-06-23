@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4"
+   name=""
+   committed-date="2007-07-01T12:08:42.030589Z"
+   url="http://colibri-java.googlecode.com/svn/trunk/colibri/io/relation"
+   last-author="dngoetzmann"
+   kind="dir"
+   uuid="6fdf767d-6532-0410-b997-0faec6aa5bbb"
+   repos="http://colibri-java.googlecode.com/svn"
+   revision="5"/>
+<entry
+   committed-rev="4"
+   name="RelationReaderCON.java"
+   text-time="2007-12-18T20:53:00.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="c56940252a61f78cd5d8506970599537"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:59.000000Z"/>
+<entry
+   committed-rev="4"
+   name="RelationReaderXML.java"
+   text-time="2007-12-18T20:53:00.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="b6735a8154d49d685f080a6a862ad664"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:59.000000Z"/>
+<entry
+   committed-rev="4"
+   name="RelationWriterCON.java"
+   text-time="2007-12-18T20:53:00.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="567336a16e3562bfaac5fe11d0575228"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:53:00.000000Z"/>
+<entry
+   committed-rev="4"
+   name="RelationWriterXML.java"
+   text-time="2007-12-18T20:53:00.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="c0fd2c96235870dda773938cc0d8a335"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:53:00.000000Z"/>
+</wc-entries>

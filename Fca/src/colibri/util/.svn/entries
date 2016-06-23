@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4"
+   name=""
+   committed-date="2007-07-01T12:08:42.030589Z"
+   url="http://colibri-java.googlecode.com/svn/trunk/colibri/util"
+   last-author="dngoetzmann"
+   kind="dir"
+   uuid="6fdf767d-6532-0410-b997-0faec6aa5bbb"
+   repos="http://colibri-java.googlecode.com/svn"
+   revision="5"/>
+<entry
+   committed-rev="4"
+   name="RandomRelationGenerator.java"
+   text-time="2007-12-18T20:53:00.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="a88803982dc0c6893536a49ecc38fb69"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:53:00.000000Z"/>
+<entry
+   committed-rev="4"
+   name="RandomRelationWriter.java"
+   text-time="2007-12-18T20:53:00.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="2a6c6428197a1d2a2fefbb4f17073057"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:53:00.000000Z"/>
+</wc-entries>

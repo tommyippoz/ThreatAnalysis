@@ -1,0 +1,87 @@
+Component,IRENE Index,Motivation
+EC,-,-
+DC,10,"It is possible to left open tunnels, that an adversary can exploit"
+MG,10,"It is possible to left open tunnels, that an adversary can exploit"
+MG,17,"A micro grid can have specific setups about the permissions and protocols to use, and an adversary can try to exploit lacks in these components"
+MG,31,"A micro grid can have specific setups about the permissions and protocols to use, and pivileges can be setupped in a wrong way"
+MG,37,"When a service speciic of micro grid is updated, vulnerabilities can be inserted into that software"
+PS,-,-
+LRC,-,-
+F,5,"Factories are key buildings, so adversaries could want to deliver malware to compromise / observe key functionalities"
+F,13,"Factories are key buildings, so adversaries could want to comprimise the update process of a component"
+F,22,"Factories are key buildings, so adversaries could want to compromise the devices of the employers, trying to obtain key information"
+F,23,"Factories are key buildings, so adversaries could want to damage key data"
+F,30,"Factories work with employers, that can inadvertently expose critical information"
+F,36,Factories are key buildings with huge support of resources that degrade due to countinuous usage
+F,37,"Factories are key buildings with huge information support systems, so software could be affected by bugs that lead to vulnerabilities"
+H,5,"Hospitals are key buildings, so adversaries could want to deliver malware to compromise / observe key functionalities"
+H,23,"Hospitals are key buildings, so adversaries could want to damage their key data"
+H,24,"Hospitals are key buildings, so adversaries could want to obtain unauthorized access to key resources"
+H,25,"Hospitals are key buildings, so adversaries could want to obtain data stealing unprotected devices"
+H,30,"Hospitals work with medical employers, that can inadvertently expose critical information"
+S,-,-
+O,4,"Offices are key buildings, so adversaries could want to annoy or steal information by the users"
+O,5,"Offices are key buildings, so adversaries could want to deliver malware to compromise / observe key functionalities"
+O,9,"Offices are key buildings with huge support systems, so adversaries could want to exploit lack of configurations related to this system"
+O,13,"Offices are key buildings, so adversaries could want to comprimise the update process of a component"
+O,20,"Offices are key buildings, so adversaries could want to attack the systems in cyber-physical ways"
+O,22,"Offices are key buildings, so adversaries could want to compromise the devices of the employers, trying to obtain key information"
+O,23,"Offices are key buildings, so adversaries could want to damage their key data"
+O,25,"Offices are key buildings, so adversaries could want to obtain data stealing unprotected devices (e.g. lost employer device)"
+O,29,"Offices are key buildings, so adversaries could want to try to spill information from employers' devices"
+O,30,"Offices work with employers, that can inadvertently expose critical information"
+O,37,"Offices are key buildings with huge information support systems, so software could be affected by bugs that lead to vulnerabilities"
+PP,-,-
+PVG,-,-
+WF,-,-
+DES,6,Communications to and from the storages could be observed to collect network traffic
+DES,8,"Storages are key buildings, so adversaries could want to try to exploit staff access to get access to key functionalities"
+DES,13,"Storages are key buildings, so adversaries could want to comprimise the update process of a component"
+DES,14,"Storages are key buildings, so adversaries could want to compromise their information systems"
+DES,17,"Storages can have specific setups about the permissions and protocols to use, and an adversary can try to exploit lacks in these components"
+DES,19,"Storages are key buildings, so adversaries could want to try to lead physical attacks against that facility"
+DES,23,"Storages are key buildings, so adversaries could want to damage key data"
+DES,24,"Storages are key buildings, so adversaries could want to obtain unauthorized access to key resources"
+DES,32,"Since this component has a physical state, earthquakes can damage it"
+DES,33,"Since this component has a physical state, fire can damage it"
+DES,34,"Since this component has a physical state, flood can damage it"
+DES,35,"Since this component has a physical state, hurricanes can damage it"
+DES,36,Storages are key buildings with huge support of resources that degrade due to continuous usage
+DES,38,"Storages are key buildings with huge support of hard drive resources that can fail due to usage, depletion or read write errors."
+AP,14,"Access points are exposed to compromisation of policies, permissions, ports and channels also due to inserted malware"
+AP,16,Access points are exposed to jamming attacks aimed to block or damage the usual traffic on the network
+AP,18,Access points are exposed to denial of service attacks aimed to block or damage the usual traffic on the network
+AP,19,"Access points are exposed to compromisation of policies, permissions, ports and channels also due to physical attacks"
+AP,24,"Access points are exposed to compromisation of policies, permissions, ports and channels also due to violations to authorization controls"
+AP,31,"Access points are exposed to compromisation of policies, permissions, ports and channels also due to violations to privilege settings"
+AP,37,"Access points are exposed to compromisation of policies, permissions, ports and channels also due to vulnerabilities inserted in component's drivers"
+SH,4,Some of the vulnerabilities of Smart Homes come from the citizens that use smart services and functonalities. Phising attacks can be leaded to the user to get sensitive information 
+SH,9,Some of the vulnerabilities of Smart Homes come from the citizens that use smart services and functonalities. Wrong configurations and permissions can be defined by non expert users
+SH,11,Attacks can be conducted through vulnerabilities left in the devices of the citizens that live in that home
+SH,23,Attacks can be conducted with the aim to damage energy usage policies or sensitive data to create problems (e.g. to city load balancing strategies)
+SH,24,Attacks can be conducted with the aim to obtain unhautorized access to key components
+SH,29,"Some of the vulnerabilities of Smart Homes come from the citizens that use smart services and functonalities, and sensitive informations ca be spilled from devices or network tunnels"
+SH,30,"Some of the vulnerabilities of Smart Homes come from the citizens that use smart services and functonalities, "
+SH,37,Some informtion can be inadvertently exposed by the citizens that use smart services and functonalities.
+SB,5,"Since they are special buildings, adversaries could want to deliver malware to compromise / observe key functionalities"
+SB,9,"Special buildings can have huge support systems, so adversaries could want to exploit lack of configurations related to this system"
+SB,17,"Since they are special buildings, they have specific setups about the permissions and protocols to use, and an adversary can try to exploit lacks in these components"
+SB,18,"Since they are special buildings with key roles in a city's scenario, these components are exposed to denial of service attacks aimed to comromise the correct behaviour"
+SB,20,"Since they are special buildings, adversaries could want to attack the systems in cyber-physical ways"
+SB,22,"Since they are special buildings, adversaries could want to compromise the devices of the employers, trying to obtain key information"
+SB,25,"Since they are special buildings, adversaries could want to obtain data stealing unprotected devices (e.g. lost employer device)"
+SB,29,"Since they are special buildings, adversaries could want to try to spill information from employers' devices"
+SB,30,"Special buildings work with employers, that can inadvertently expose critical information"
+BDC,-,-
+SCADA,11,"Due to the advanced capabilities to retrieve data also from mobile devices, adverary can use these connections to lead attacks exploiting vulnerabilities of phones and tablets"
+SCADA,25,"Due to the advanced capabilities to retrieve data also from mobile devices, adverary can use these way to get information or damage operations using unattended devices"
+CP,5,"Charging points are key components, so adversaries could want to deliver malware to compromise / observe key functionalities such as the energy consumption"
+CP,9,Wrong configurations and permissions can give the attacker the chanche to steal energy from city grid
+CP,13,"Charging points are key components, so adversaries could want to comprimise the update process of a component"
+CP,24,"Charging points are key components, so adversaries could want to obtain unauthorized access to energy consumption"
+CP,32,"Since this component has a physical state, earthquakes can damage it"
+CP,33,"Since this component has a physical state, fire can damage it"
+CP,34,"Since this component has a physical state, flood can damage it"
+CP,35,"Since this component has a physical state, hurricanes can damage it"
+CP,36,Charging points are key components with huge support of resources that degrade due to continuous usage
+CP,37,"Charging points are key components with huge information support systems (especially for auuthentication), so software could be affected by bugs that lead to vulnerabilities"

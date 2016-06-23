@@ -1,0 +1,52 @@
+Group,IRENE Index,Motivation
+CON,1,Information shared in networks can be sniffed from connections
+CON,3,Connection can be surveilled to get information about vulnerabilities
+CON,6,Connection can be sniffed to collect data related to network traffic
+CON,15,Communications can be intercepted directly from the link
+CON,19,Communications can be broke up by physical attacks aimed to interrupt the exchange of data
+EP,3,Since energy providers are key buildings; a surveillance could be lead to undestand vulnerabilities of the system.
+EP,5,Since energy providers can have huge support coming from software systems depending on the functionality; adversary mmight want to deliver malware into that software
+EP,6,Energy Providers need to communicate with the grid to understand useful indications about the generation of energy; so a sniffer activity colud reveal lot of information about policies
+EP,7,Energy providers works with employers; and subverted individuals can act the part of a simple employer and damage the structure
+EP,8,Energy providers works with employers; and the access of authorized staff can be exploited
+EP,14,Control software could be targeted especially due to its criticality
+EP,19,Since energy providers are physical buildings; physical attacks could be lead with success
+EP,22,Energy providers works with employers; and their devices could be compromised with the aim to reveal critical information
+EP,26,Due to the complexity and the relevance of the tasks performed by the energy provider; multi - staged attacks can be conducted to defeat protections against attackers
+EP,27,Since in the city scenario multiple organizations that provides energy are working simoultaneously; the attacker can try to observe different companies to acquire useful data to break defenses of target provider
+EP,28,When a malicious presence is working in this type of city component; the actions can damage also other component; since the energy is needed in each of the city's services
+EP,30,Energy providers works with employers; and users can inadvertently expose information to other people
+EP,32,Since this component has a physical state; earthquakes can damage it
+EP,33,Since this component has a physical state; fire can damage it
+EP,34,Since this component has a physical state; flood can damage it
+EP,35,Since this component has a physical state; hurricanes can damage it
+BLD,2,Builings are inserted in a city with specific purposes; that can be publically accessible and available also for adversaries
+BLD,3,Each building can have its vulnerabilities; and the adversary wants to discover most of them
+BLD,7,Building's employers can be inserted by adversarial organizations to obtain access to critical data
+BLD,8,Building's employers have permissions to avoid security checks; that can be exploited from adversary
+BLD,12,The physical and organizational evolution of companies that use building can introduce vulnerabilities in the cyber-physical structure
+BLD,14,Each building has its software system depending on the functionalities and the adversary wants to insert malware to get data or compromise operations
+BLD,19,Buildings are physical components; so is possible to conduct physical attacks aimed to damage them
+BLD,26,Due to the complexity and the relevance of some of the tasks performed by the company that owns the building; multi - staged attacks can be conducted to defeat protections against attackers
+BLD,28,When a malicious presence is working in this type of city component; the actions can damage also other component; depending on the specificity of that building
+BLD,32,Since this component has a physical state; earthquakes can damage it
+BLD,33,Since this component has a physical state; fire can damage it
+BLD,34,Since this component has a physical state; flood can damage it
+BLD,35,Since this component has a physical state; hurricanes can damage it
+DAC,5,Data Center control most of the smartness of the grid; so adversary might want to compromise the functionalities with different kind of malwares
+DAC,6,Data Center control most of the smartness of the grid and needs lot of data that can be observed during the execution
+DAC,9,Data Center can be very complex; and the security configurations must be well-tailored to avoid adversary intrusions
+DAC,10,Communications to and from data center need to open tunnels that could be left oopen by applications that are not well-written
+DAC,14,Due to the complexity and the criticalty of Data Center actions; the adversary might want to insert malware to get data or compromise operations
+DAC,15,Communications to and from data center can be intercepted to limit or damage the effectiveness of techniques managed from this component
+DAC,16,Data Centers are exposed to jamming attacks aimed to block or damage the usual traffic on the network
+DAC,17,Since data is coming in a huge quantities from different ports or protocols; adversary can try to exploit these wider range of connections to found vulnerabilities
+DAC,18,Data Centers are exposed to denial of service attacks aimed to block or damage the usual traffic on the network
+DAC,20,Data Centers are key components; so adversaries could want to attack the systems in cyber-physical ways
+DAC,23,Integrity of data is a pillar to the correct behavior of the Data Center; so adversary could try to damage it leading this component to take wrong decisions
+DAC,24,Data Centers are exposed to compromisation of policies; permissions; ports and channels also due to violations to authorization controls
+DAC,29,Data is coming also from devices; that can be contaminated and prepared to send wrong or malicious data to Data Center
+DAC,31,A data center can have specific setups about the permissions and protocols to use; and privileges can be setupped in a wrong way
+DAC,36,Data Center are key components with huge support of resources that degrade due to continuous usage
+DAC,37,Data Center are key components with huge information support systems (especially for auuthentication); so software could be affected by bugs that lead to vulnerabilities
+DAC,38,Data Center are key components with huge support of hard drive resources that can fail due to usage; depletion or read write errors.

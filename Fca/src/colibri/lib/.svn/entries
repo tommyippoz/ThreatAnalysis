@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="4"
+   name=""
+   committed-date="2007-07-01T12:08:42.030589Z"
+   url="http://colibri-java.googlecode.com/svn/trunk/colibri/lib"
+   last-author="dngoetzmann"
+   kind="dir"
+   uuid="6fdf767d-6532-0410-b997-0faec6aa5bbb"
+   repos="http://colibri-java.googlecode.com/svn"
+   revision="5"/>
+<entry
+   committed-rev="4"
+   name="ComparableTreeSet.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="409c8a88d9dbb890588ae0c510652fbf"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="ConceptIteratorTDBF.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="d5c88225b4beff90c08ac045368e0f49"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="ViolationIteratorTD.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="49dca0f637cde210439a36fda64072d4"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="LatticeImpl.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="92482ed9f9cf9cd645fa6276b3cde772"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="ConceptIteratorTDDF.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="6bce57adf7983d8a07dfc2350f973621"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="EdgeIteratorTDBF.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="bb81ee5ca7eea031f65ed8d023432a2d"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="Agenda.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="ae53e5a5df20bbf473175e856760e16d"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="EdgeIteratorTDDF.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="346c115d2dc2301d04f74458d67a6567"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:58.000000Z"/>
+<entry
+   committed-rev="4"
+   name="HashRelation.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="a86a98233f11f7de4bdecdc0ff8de30d"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:58.000000Z"/>
+<entry
+   committed-rev="4"
+   name="ComparableSet.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="2133e2f46f60e063c2873b1b6b56547f"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:58.000000Z"/>
+<entry
+   committed-rev="4"
+   name="ConceptComparator.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="cb0de50879e5f38aa3cce3ab12cf5d1d"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:58.000000Z"/>
+<entry
+   committed-rev="4"
+   name="Lattice.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="17a28782f133bc77bb5cb5eea2175926"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:58.000000Z"/>
+<entry
+   committed-rev="4"
+   name="HybridLattice.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="e7e1176c9f8ca112b57e1849555d64c7"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:58.000000Z"/>
+<entry
+   committed-rev="4"
+   name="HybridIterator.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="855a7a720cee1575b922eb864cf05c78"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:58.000000Z"/>
+<entry
+   committed-rev="4"
+   name="Concept.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="e646784426639f2c2a055f07f7038a97"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:58.000000Z"/>
+<entry
+   committed-rev="4"
+   name="TreeRelation.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="1e951306704005ca15265c125d048960"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:59.000000Z"/>
+<entry
+   committed-rev="4"
+   name="HybridSet.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="b05abd9a91ef23463b70bf37cfba1917"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:59.000000Z"/>
+<entry
+   committed-rev="4"
+   name="RawLattice.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="88f2d92ece30d3fb01847ab196913944"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:56.000000Z"/>
+<entry
+   committed-rev="4"
+   name="Traversal.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="7906cf37b26c260c91c1cc82b3794813"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="ConceptIteratorBUBF.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="c74a00ec01a4de2fc38cd844078a314f"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="Edge.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="5c10052762fd427795efc6bc663fad47"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="ConceptIteratorBUDF.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="d1466d2d3ab0809f26ac357a58d49bd7"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="Relation.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="4e42b743a3dbf4999a692a8029958f3d"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="EdgeIteratorBUBF.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="fb2f2dab2db4c4b9d8a1f56aee9f8100"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="HybridRelation.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="82d9a72d557c14f40929f8aaf8c841eb"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="EdgeIteratorBUDF.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="cab1c54cc6f0e75fc1be7106f76cf19d"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:57.000000Z"/>
+<entry
+   committed-rev="4"
+   name="ComparableHashSet.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="16a26895ea9f376b4e396c88405d7577"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:58.000000Z"/>
+<entry
+   committed-rev="4"
+   name="ConceptOrder.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="75684618c48ef089800d64a98b68e296"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:58.000000Z"/>
+<entry
+   committed-rev="4"
+   name="StdRelation.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="e998b5d40916201fa9989a3fa44823a2"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:58.000000Z"/>
+<entry
+   committed-rev="4"
+   name="UnmodifiableSetException.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="c4f0d7a93aeabfff24b6381f033a1621"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:58.000000Z"/>
+<entry
+   committed-rev="4"
+   name="HybridTranslator.java"
+   text-time="2007-12-18T20:52:59.000000Z"
+   committed-date="2007-07-01T12:08:42.030589Z"
+   checksum="5404c2c850ace7d9ee408d7d6156bf8c"
+   last-author="dngoetzmann"
+   kind="file"
+   prop-time="2007-12-18T20:52:58.000000Z"/>
+</wc-entries>

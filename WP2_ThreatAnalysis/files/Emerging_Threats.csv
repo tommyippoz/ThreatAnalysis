@@ -1,0 +1,101 @@
+IRENE Index,Involved Components,Description
+4,SH; AP,While browsing the internet from home through access point; citizens may incur in phishing attacks aimed  to steal personal data
+10,AP; PP,Tunnels left opened by citizens can be exploited to conduct any type of attack through the tunnel
+15,SH; AP,Communications can be intercepted if an adversary takes place in the middle of a wireless/cable excange of data between homes and access point
+21,SH; AP,Communications can be intercepted if an adversary takes place in the middle of a wireless/cable excange of data between homes and access point
+29,SH; AP,The citizen is usually not aware of security issues so it may leave critical or sensible information exposed to the network
+30,SH; AP,The citizen is usually not aware of security issues so it may leave critical or sensible information exposed to the network
+31,S; F,When a match is in progress; a huge amount of energy is requested by the stadium; and maybe stealed from other key resources
+31,S; SH,When a match is in progress; a huge amount of energy is requested by the stadium; and maybe stealed from other key resources
+17,SH; AP,The growing number of citizens that use the access point lead to open more ports; services and protocols; that are difficult to control and manage. The adversary can expolit one of that ones.
+31,SH; SH,The growing number of citizens can lead to competition to get energy among different smart homes
+31,SB; SH,The special building (thermal center) needs of a continuous supply of energy; that in some days or weekends can be higher than usual leading to a competition to get energy against other city buildings
+31,SB; S,When a match is in progress; a huge amount of energy is requested by the stadium; and maybe stealed from other key resources
+5,O; SH,Personal devices of the employeers can be corrupted by this type of malware. Its diffusion is facilitated by the lackness of attention that a common user has with respect to the common communication channels
+9,O; SH,The security configurations of each office are dependent from the passwords of the employeers; and the permissions may not be always configured in the right way
+11,O; SH,Personal devices of the employeers can be corrupted by this type of malware. Its diffusion is facilitated by the lackness of attention that a common user has with respect to the common communication channels
+15,O; SH,When an employeer try to connect to the office from home an attacker can intercept data such as passwords or other types of key informations because the communication may be not encrypted
+20,O; SH,Taking advantage of information that can be errounosly left available from the employeers; the attacker can lead cyber-physical threats directed to the offices.
+27,O; O,Adversary can acquire information from different organizations that have offices in the city
+29,O; SH,The lackness of attention that a common user has with respect to the common communication channels can contribute to expose informations with non authorized users.
+30,O; SH,The lackness of attention that a common user has with respect to the common communication channels can contribute to expose informations with non authorized users.
+31,O; S,When a match is in progress; a huge amount of energy is requested by the stadium; and maybe stealed from other key resources
+31,O; O,Different offices can fight to obtain the needed energy; stealing it from other offices
+31,O; SB,The special building (thermal center) needs of a continuous supply of energy; that in some days or weekends can be higher than usual leading to a competition to get energy against other city buildings
+10,AP; H,If a citizen checks some data related to the hospital or requests some services such as payments; day hospital treatment ? some connections must not be closed properly by the user; giving the attacker opportunities to exploit this tunnels.
+15,AP; H,If a citizen checks some data related to the hospital or requests some services such as payments; day hospital treatment; the attacker can collect the data trying to extract useful information
+16,AP; H,The services provided by the hospital can be blocked using wireless jamming techniques from the public access point
+18,AP; H,The services provided by the hospital can be blocked using DoS technique from the public access point
+21,AP; H,If a citizen checks some data related to the hospital or requests some services such as payments; day hospital treatment; the attacker can intercept the data trying to extract useful information or compromise the communications.
+31,H; S,When a match is in progress; a huge amount of energy is requested by the stadium; and maybe stealed from other key resources
+31,H; O,The hospital needs a countinuous supply of energy that can generate races to acquire the energy.
+31,H; SB,The special building (thermal center) needs of a continuous supply of energy; that in some days or weekends can be higher than usual leading to a competition to get energy against other city buildings
+31,H; F,The hospital needs a countinuous supply of energy that can generate races to acquire the energy.
+5,AP; BDC,Using the public access point the adversary can try to insert some kind of malware into the data center; (e.g. sending some corrupted data that contains malware)
+9,AP; BDC,Using the public access point the adversary can exploit poorly configured protocols to get access to key functionalities of the data center control
+12,AP; BDC,Using the public access point the adversary can try to exploit some vulnerabilities of the new data center that are not detected from the city owners
+12,AP; S,Using the public access point the adversary can try to exploit some vulnerabilities due to the recent connection changes that are not detected from the city owners
+15,DES; H,The data channel between storages and key buildings can be monitored to intercept key communications (e.g. request of providing more energy in a specific interval of time)
+15,DES; F,The data channel between storages and key buildings can be monitored to intercept key communications (e.g. request of providing more energy in a specific interval of time)
+15,DES; SB,The data channel between storages and key buildings can be monitored to intercept key communications (e.g. request of providing more energy in a specific interval of time)
+15,DES; S,The data channel between storages and key buildings can be monitored to intercept key communications (e.g. request of providing more energy in a specific interval of time)
+15,BDC; H,The data channel between data center and key buildings can be monitored to intercept key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...)
+15,BDC; F,The data channel between data center and key buildings can be monitored to intercept key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...)
+15,BDC; SB,The data channel between data center and key buildings can be monitored to intercept key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...)
+15,BDC; S,The data channel between data center and key buildings can be monitored to intercept key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...)
+15,DES; BDC,The data channel between data center and key buildings can be monitored to intercept key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...)
+21,DES; H,The data channel between storages and key buildings can be monitored to intercept or counterfeit key communications (e.g. request of providing more energy in a specific interval of time) changing the content of a specific group of packets.
+21,DES; F,The data channel between storages and key buildings can be monitored to intercept or counterfeit key communications (e.g. request of providing more energy in a specific interval of time) changing the content of a specific group of packets.
+21,DES; SB,The data channel between storages and key buildings can be monitored to intercept or counterfeit key communications (e.g. request of providing more energy in a specific interval of time) changing the content of a specific group of packets.
+21,DES; S,The data channel between storages and key buildings can be monitored to intercept or counterfeit key communications (e.g. request of providing more energy in a specific interval of time) changing the content of a specific group of packets.
+21,BDC; H,The data channel between data center and key buildings can be monitored to intercept or counterfeit key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...) changing the content of a specific group of packets.
+21,BDC; F,The data channel between data center and key buildings can be monitored to intercept or counterfeit key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...) changing the content of a specific group of packets.
+21,BDC; SB,The data channel between data center and key buildings can be monitored to intercept or counterfeit key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...) changing the content of a specific group of packets.
+21,BDC; S,The data channel between data center and key buildings can be monitored to intercept or counterfeit key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...) changing the content of a specific group of packets.
+21,DES; BDC,The data channel between data center and key buildings can be monitored to intercept or counterfeit key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...) changing the content of a specific group of packets.
+5,OD; AP,Personal devices of the employeers can be corrupted by this type of malware. Its diffusion is facilitated by the lackness of attention that a common user has with respect to the common communication channels
+5,MG; AP,Using the access point the adversary can try to inject malware into other components; especially the new micro grid that controls the activities of buildings that are pillars of the city's economy
+9,OD; AP,The security configurations of each office are dependent from the passwords of the employeers; and the permissions may not be always configured in the right way
+12,OD; AP,The permissions to access data may not be always configured in the right way because of the dinamicity of the offices in which a person can change role; fired; suspended; ...
+15,OD; AP,When an employeer try to connect to the office from home an attacker can intercept data such as passwords or other types of key informations because the communication may be not encrypted
+20,OD; AP,Taking advantage of information that can be errounosly left available from the employeers; the attacker can lead cyber-physical threats directed to the offices.
+24,MG; AP,Using the access point the adversary can try to get privileged access to other components; especially the new micro grid that controls the activities of buildings that are pillars of the city's economy
+29,OD; AP; SH,The lackness of attention that a common user has with respect to the common communication channels can contribute to expose informations with non authorized users if the employeer try to access to work data from home
+30,OD; AP; SH,The lackness of attention that a common user has with respect to the common communication channels can contribute to expose informations with non authorized users if the employeer try to access to work data from home
+31,MG; S,When a match is in progress; a huge amount of energy is requested by the stadium; and maybe stealed from other key resources
+31,MG; H,The hospital needs a countinuous supply of energy that can generate races to acquire the energy.
+31,MG; SB,The special building (thermal center) needs of a continuous supply of energy; that in some days or weekends can be higher than usual leading to a competition to get energy against other city buildings
+5,AP; SCADA,Using the public access point the adversary can try to insert some kind of malware into the SCADA; (e.g. sending some corrupted data that contains malware)
+9,AP; SCADA,Using the public access point the adversary can exploit poorly configured protocols to get access to key functionalities of the SCADA
+12,AP; SCADA,Using the public access point the adversary can try to exploit some vulnerabilities of the new SCADA that are not detected from the city owners
+12,MG; SCADA,Since the component is new; some interactions could have problems left erroneously (or inserted by an adversary) that can be exploited from an attacker; such as the itegration of micro grid policies with the ones defined by authorities for the whole city and implemented in SCADA.
+15,SCADA; H,The data channel between SCADA and key buildings can be monitored to intercept key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...)
+15,SCADA; F,The data channel between SCADA and key buildings can be monitored to intercept key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...)
+15,SCADA; SB,The data channel between SCADA and key buildings can be monitored to intercept key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...)
+15,SCADA; S,The data channel between SCADA and key buildings can be monitored to intercept key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...)
+15,DES; SCADA,The data channel between SCADA and key buildings can be monitored to intercept key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...)
+21,SCADA; H,The data channel between SCADA and key buildings can be monitored to intercept or counterfeit key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...) changing the content of a specific group of packets.
+21,SCADA; F,The data channel between SCADA and key buildings can be monitored to intercept or counterfeit key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...) changing the content of a specific group of packets.
+21,SCADA; SB,The data channel between SCADA and key buildings can be monitored to intercept or counterfeit key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...) changing the content of a specific group of packets.
+21,SCADA; S,The data channel between SCADA and key buildings can be monitored to intercept or counterfeit key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...) changing the content of a specific group of packets.
+21,DES; SCADA,The data channel between SCADA and key buildings can be monitored to intercept or counterfeit key communications (e.g. load balancing update; changing on permissions regarding the usage of energy; key data coming from building' sensors ...) changing the content of a specific group of packets.
+9,SH; MG,The improvement of smartness of the grid allowing communications and exchange of data from/to mobile devices can lead to expose the grid to new attacks that take advantage of some lack of permmissions or wrong configurations related to mobile access.
+10,SH; MG,Tunnels opened from mobile devices can be left opened erroneously from the user and not detected by mobile devices security techniques; that are not currently well developed as the desktop ones.
+11,SH; MG,The improvement of smartness of the grid allowing communications and exchange of data from/to mobile devices can lead to expose the grid to new attacks that take advantage of known mobile vulnerabilities.
+12,SH; MG,Since now communications can be established between mobile device and the grid; new vulnerabilities are introduced such as the protection of  tunnels opened by mobile devices.
+15,SH; MG,Communications between smart devices and the grid; as for example specific micro grids; can be intercepted
+16,SH; MG,Wireless jamming can now be conducted from mobile devices owned by the citizens against different components of the grid; such as micro grids that own the energy sources; with the target to compromise the supply of energy
+17,SH; MG,Some ports can be left opened by diifferent non well coded apps running on the mobile devices and exploited by the attacker.
+20,SH; MG,The vulnerabilities and the chances to get useful infromation looking at specific areas of memory in the mobile device can be used to conduct cyber-physical attacks. 
+21,SH; MG,Communications between smart devices and the grid; as for example specific micro grids; can be corrupted inserting wrong informations or blocking the packets 
+24,SH; MG,The vulnerabilities and the chances to get useful infromation looking at specific areas of memory in the mobile device can be used to obtain unauthorized access to facilites.
+29,SH; MG,Mobile users can share any type of information using instant messaging; mail ?; giving the observer several opportunities to catch them.
+31,MG; MG,Since now several different micro grids are installed in the smart grid; they can fight to acquire alll the needed energy eventually stealing it to other sources.
+37,SH; MG,Some of the new vulnerabilities can come from the apps and kernel modules of mobile devices.
+9,CP; MG,If the authentication policies are not strict enough or the permissions for the charging of veichles have some type of lack; the grid can incur in supply problems due to this component.
+10,CP; MG,If the process that manages the opening or closing of the channels/ports has some type of lack; the grid can incur in supply problems due to this component.
+12,CP; MG,The charging point can introduce a lot of vulnerabilities; such as ones related to authentication
+15,CP; MG,Feedbacks or requests coming from/to the charging point can be intercepted to annoy the correct behaviour of the system.
+17,CP; MG,If the permissions are not strict enough or the mechanisms to regulate the opening or closing of the channels/ports have some type of lack; the grid can incur in supply problems due to this component.
+21,CP; MG,Since this point has a key role regarding the citizen satisfaction or grid efficiency; can be targeted from DoS attacks aimed o corrupt its correct behaviour.
+31,CP; MG,If the supply of energy is not well regulated; an attacker can leech a huge amount of energy from the charging point stealing it to the near homes or other components.

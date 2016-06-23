@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!--
+   $Id: build.xml,v 1.7 2007/12/22 09:30:08 dfs Exp $
+
+Notes:
+   This is a build file for use with the Jakarta Ant build tool.
+
+Prerequisites:
+
+   jakarta-ant from http://jakarta.apache.org/ant/index.html
+
+Build Instructions:
+   To build, run
+
+   ant <target>
+
+   in the directory where this file is located with the target you want.
+
+Available targets (default == jar):
+  clean          removes generated files
+  docs           builds xml documentation
+  examples       builds the example programs
+  jar            builds lib + jar
+  javadocs       builds the javadoc
+  lib            builds the library
+  package        builds lib + jar + javadoc + distribution
+
+Run ant -projecthelp for complete list of targets with descriptions.
+-->
+
+<project default="jar">
+
+  <!-- Allow properties following these statements to be overridden -->
+  <!-- Note that all of these don't have to exist.  They've just been defined
+       incase they are used. -->
+  <property file="build.properties"/>
+<!--
+  <property file=".ant.properties"/>
+  <property file="${user.home}/.ant.properties"/>
+  <property file="default.properties"/>  
+ -->
+
+    <!-- prepare target.  Creates build directories. -->
+
+    <target name="prepare" description="Create build directories.">
+       <tstamp>
+         <format property="DATE" pattern="yyyy-MM-dd hh:mm:ss" />
+       </tstamp>
+       <mkdir dir="${build.dest}"/>
+    </target>
+
+    <!-- lib target. Compiles the library classes only -->
+
+    <target name="lib" depends="prepare" description="Compiles the library classes only.">
+      <javac srcdir="${build.src}"
+             destdir="${build.dest}"
+             excludes="examples/**" 
+             debug="${debug}"
+             deprecation="${deprecation}"
+             optimize="${optimize}"/>
+    </target>
+
+    <!-- examples target. Compiles the library classes only -->
+
+    <target name="examples" depends="prepare,lib" description="Compiles the example classes.">
+      <javac srcdir="${build.src}"
+             destdir="${build.dest}"
+             includes="examples/**"
+             debug="${debug}"
+             deprecation="${deprecation}"
+             optimize="${optimize}"/>
+    </target>
+
+    <!-- jar target.  Compiles the source directory and creates a .jar file -->
+
+    <target name="jar" depends="lib" description="Compiles the source directory and creates a .jar file.">
+      <jar jarfile="${top.dir}/${final.name}.jar" basedir="${build.dest}"/>
+    </target>
+
+    <!-- javadocs target.  Creates the API documentation -->
+
+    <target name="javadocs" depends="prepare" description="Creates the API documentation.">
+      <mkdir dir="${javadoc.destdir}"/>
+      <javadoc packagenames="colibri.lib,colibri.io.lattice,colibri.io.relation,colibri.util"
+               sourcepath="${build.src}"
+               destdir="${javadoc.destdir}"
+               author="true"
+               version="true"
+               windowtitle="${name} ${version} API"
+               doctitle="${name} ${version} API" bottom="Copyright &#169; ${year} Newegg Inc. All Rights Reserved.">
+      </javadoc>
+      <!--<replace file="${javadoc.destdir}/overview-frame.html" token="{@docroot}" value="."/>-->
+      <replace dir="${javadoc.destdir}" includes="**/*.html" token="@version@" value="${version}"/>
+    </target>
+
+    <!-- package target -->
+
+    <target name="package" depends="jar,javadocs" description="Creates a distribution directory tree.">
+      <mkdir dir="${final.dir}"/>
+      <copy todir="${final.dir}/src">
+        <fileset dir="${code.src}"/>
+      </copy>
+
+      <copy file="${top.dir}/build.xml" tofile="${final.dir}/build.xml"/>
+      <copy file="${top.dir}/build.properties" tofile="${final.dir}/build.properties"/>
+      <copy file="${top.dir}/README" tofile="${final.dir}/README"/>
+      <copy file="${top.dir}/COMPILE" tofile="${final.dir}/COMPILE"/>
+      <copy file="${top.dir}/${final.name}.jar" tofile="${final.dir}/${final.name}.jar"/>
+    </target>
+
+    <!-- Makes an attempt to clean up a little. -->
+
+    <target name="clean" description="Removes generated artifacts from source tree.">
+      <delete dir="${build.dest}"/>
+      <delete dir="${javadoc.destdir}"/>
+      <delete dir="${final.dir}"/>
+      <delete file="${top.dir}/${final.name}.jar"/>
+    </target>
+  
+</project>
