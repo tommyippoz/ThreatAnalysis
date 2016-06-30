@@ -3,6 +3,7 @@
  */
 package ippoz.irene.threatanalysis.threats;
 
+import ippoz.irene.threatanalysis.component.Component;
 import ippoz.irene.threatanalysis.component.ComponentCategory;
 import ippoz.irene.threatanalysis.component.ComponentType;
 import ippoz.irene.threatanalysis.utility.AppLogger;
@@ -220,7 +221,22 @@ public class ThreatManager {
 		}
 		return null;
 	}
+
+	public LinkedList<Threat> getCategoryThreats(Component comp) {
+		return categoryThreats.get(Component.getCategoryOf(comp.getCompType()));
+	}
 	
-	
+	public LinkedList<Threat> getComponentThreats(Component comp) {
+		return componentThreats.get(comp.getCompType());
+	}
+
+	public HashMap<LinkedList<ComponentType>, LinkedList<Threat>> getEmergingThreats(Component comp) {
+		HashMap<LinkedList<ComponentType>, LinkedList<Threat>> ect = new HashMap<LinkedList<ComponentType>, LinkedList<Threat>>();
+		for(LinkedList<ComponentType> ctl : emergingThreats.keySet()){
+			if(ctl.contains(comp.getCompType()))
+				ect.put(ctl, emergingThreats.get(ctl));
+		}
+		return ect;		
+	}
 	
 }

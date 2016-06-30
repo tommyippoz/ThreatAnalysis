@@ -3,10 +3,6 @@
  */
 package ippoz.irene.threatanalysis.component;
 
-import ippoz.irene.threatanalysis.threats.Threat;
-
-import java.util.LinkedList;
-
 /**
  * @author Tommy
  *
@@ -28,6 +24,15 @@ public class Connection extends Component {
 
 	public Component getTo() {
 		return to;
+	}
+	
+	public boolean relatedTo(Component dc) {
+		return from == dc || to == dc;
+	}
+
+	@Override
+	public String toString() {
+		return getName() + "@[" + from.toString() + "-" + to.toString() + "]";
 	}
 
 }

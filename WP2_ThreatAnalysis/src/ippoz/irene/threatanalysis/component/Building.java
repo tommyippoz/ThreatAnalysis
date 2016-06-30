@@ -13,4 +13,9 @@ public class Building extends Component {
 		super(name, compType);
 	}
 
+	@Override
+	public String toString() {
+		return getName();
+	}
+
 }

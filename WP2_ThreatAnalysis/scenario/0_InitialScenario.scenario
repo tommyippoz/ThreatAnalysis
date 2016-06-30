@@ -4,12 +4,20 @@
 ADD,PP,Power Plant
 ADD,F,Factory
 ADD,SH,SH 1
+ADD,SH,SH 2
 ADD,PS,Substation 1
+ADD,PS,Substation 2
+ADD,AP,Access Point
+ADD,S,Stadium
 
 * Connections
-ADD,EC,C_F_PS,Factory;Substation 1
-ADD,EC,C_PP_PS,Power Plant;Substation 1
-ADD,EC,C_SH,SH 1;C_PP_PS
+ADD,EC,C_F_PS2,Factory;Substation 2
+ADD,EC,C_PP_PS2,Power Plant;Substation 2
+ADD,EC,C_[C_F_PS2]_S,C_F_PS2;Stadium
+ADD,EC,C_[C_F_PS2]_AP,C_F_PS2;Access Point
+ADD,EC,C_[C_F_PS2]_PS1,C_F_PS2;Substation 1
+ADD,EC,C_SH1_PS1,SH 1;Substation 1
+ADD,EC,C_SH1_PS1,SH 2;Substation 1
 
 * Remotions
 

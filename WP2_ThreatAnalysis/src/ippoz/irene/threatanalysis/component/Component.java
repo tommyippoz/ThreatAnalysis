@@ -56,4 +56,7 @@ public abstract class Component {
 		}
 	}
 
+	@Override
+	public abstract String toString();
+	
 }

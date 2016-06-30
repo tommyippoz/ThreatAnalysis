@@ -1,2 +1,3 @@
 FILE_FOLDER = files
 SCENARIO_FOLDER = scenario
+OUTPUT_FOLDER = ../../git_data/IRENE

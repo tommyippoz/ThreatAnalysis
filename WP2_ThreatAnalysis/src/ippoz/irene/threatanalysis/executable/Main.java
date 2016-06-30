@@ -20,6 +20,7 @@ public class Main {
 
 	private static final String FILE_FOLDER = "FILE_FOLDER";
 	private static final String SCENARIO_FOLDER = "SCENARIO_FOLDER";
+	private static final String OUTPUT_FOLDER = "OUTPUT_FOLDER";
 
 	/**
 	 * @param args
@@ -29,7 +30,7 @@ public class Main {
 		Analyzer tAnalyzer;
 		try {
 			pManager = new PreferencesManager("threat_analysis.preferences");
-			tAnalyzer = new Analyzer(pManager, new ThreatManager(pManager.getPreference(FILE_FOLDER)));
+			tAnalyzer = new Analyzer(new ThreatManager(pManager.getPreference(FILE_FOLDER)), pManager.getPreference(OUTPUT_FOLDER));
 			tAnalyzer.analyze(loadEvolutionSteps(pManager.getPreference(SCENARIO_FOLDER)));
 			tAnalyzer.report();
 			tAnalyzer.flush();
