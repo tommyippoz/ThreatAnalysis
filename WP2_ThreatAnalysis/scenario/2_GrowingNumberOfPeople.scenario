@@ -1,0 +1,17 @@
+* Additions
+
+* Components
+ADD,O,Office 1
+ADD,O,Office 2
+ADD,WF,Wind Farm
+
+* Connections
+ADD,EC,C_O1_[C_SB_PS2],Office 1;C_SB_PS2
+ADD,EC,C_O2_[C_F_PS2],Office 2;C_F_PS2
+ADD,EC,C_WF_[C_F_PS2],Wind Farm;C_F_PS2
+
+* Remotions
+
+* Components
+
+* Connections

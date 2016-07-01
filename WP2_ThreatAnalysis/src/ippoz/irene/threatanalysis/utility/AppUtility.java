@@ -49,7 +49,7 @@ public class AppUtility {
 			}
 			reader.close();
 		} else {
-			AppLogger.logInfo(AppUtility.class, "Unexisting preference file: " + prefFile.getAbsolutePath());
+			AppLogger.logError(AppUtility.class, "PreferenceFileNotFound", "Unexisting preference file: " + prefFile.getAbsolutePath());
 		}
 		return map;
 	}

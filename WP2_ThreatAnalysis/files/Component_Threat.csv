@@ -31,6 +31,17 @@ O,25,"Offices are key buildings, so adversaries could want to obtain data steali
 O,29,"Offices are key buildings, so adversaries could want to try to spill information from employers' devices"
 O,30,"Offices work with employers, that can inadvertently expose critical information"
 O,37,"Offices are key buildings with huge information support systems, so software could be affected by bugs that lead to vulnerabilities"
+OD,4,"Offices are key buildings, so adversaries could want to annoy or steal information by the users"
+OD,5,"Offices are key buildings, so adversaries could want to deliver malware to compromise / observe key functionalities"
+OD,9,"Offices are key buildings with huge support systems, so adversaries could want to exploit lack of configurations related to this system"
+OD,13,"Offices are key buildings, so adversaries could want to comprimise the update process of a component"
+OD,20,"Offices are key buildings, so adversaries could want to attack the systems in cyber-physical ways"
+OD,22,"Offices are key buildings, so adversaries could want to compromise the devices of the employers, trying to obtain key information"
+OD,23,"Offices are key buildings, so adversaries could want to damage their key data"
+OD,25,"Offices are key buildings, so adversaries could want to obtain data stealing unprotected devices (e.g. lost employer device)"
+OD,29,"Offices are key buildings, so adversaries could want to try to spill information from employers' devices"
+OD,30,"Offices work with employers, that can inadvertently expose critical information"
+OD,37,"Offices are key buildings with huge information support systems, so software could be affected by bugs that lead to vulnerabilities"
 PP,-,-
 PVG,-,-
 WF,-,-

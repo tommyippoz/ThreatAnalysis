@@ -1,0 +1,17 @@
+* Additions
+
+* Components
+ADD,DES,Storage 1
+ADD,DES,Storage 2
+ADD,BDC,Basic Data Center
+
+* Connections
+ADD,EC,C_DES1_[C_WF_[C_F_PS2]],Storage 1;C_WF_[C_F_PS2]
+ADD,EC,C_DES2_[C_SB_PS2],Storage 2;C_SB_PS2
+ADD,EC,C_BDC_[C_F_PS2],Basic Data Center;C_F_PS2
+
+* Remotions
+
+* Components
+
+* Connections

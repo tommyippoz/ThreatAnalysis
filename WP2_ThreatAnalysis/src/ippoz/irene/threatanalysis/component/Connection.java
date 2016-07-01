@@ -26,8 +26,11 @@ public class Connection extends Component {
 		return to;
 	}
 	
+	@Override
 	public boolean relatedTo(Component dc) {
-		return from == dc || to == dc;
+		if(dc instanceof Connection){
+			return from == dc || to == dc || ((Connection) dc).getFrom().equals(this) || ((Connection) dc).getTo().equals(this);
+		} else return from == dc || to == dc;
 	}
 
 	@Override

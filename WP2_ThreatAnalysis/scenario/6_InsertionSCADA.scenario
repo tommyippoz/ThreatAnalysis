@@ -1,10 +1,8 @@
 * Additions
 
 * Components
-ADD,SB,Special Building
 
 * Connections
-ADD,EC,C_SB_PS2,Substation 2;Special Building
 
 * Remotions
 

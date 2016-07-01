@@ -3,15 +3,18 @@
  */
 package ippoz.irene.threatanalysis.scenario;
 
+import ippoz.irene.threatanalysis.component.Building;
 import ippoz.irene.threatanalysis.component.Component;
 import ippoz.irene.threatanalysis.component.ComponentType;
 import ippoz.irene.threatanalysis.component.Connection;
 import ippoz.irene.threatanalysis.threats.Threat;
 import ippoz.irene.threatanalysis.threats.ThreatManager;
+import ippoz.irene.threatanalysis.utility.AppLogger;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
 
@@ -40,10 +43,138 @@ public class Scenario {
 	public Scenario(EvolutionStep eStep, ThreatManager tManager) {
 		this(null, eStep, tManager);
 	}
-
+	
+	public int threatCount() {
+		int count = 0;
+		for(LinkedList<Component> cl : scenarioThreats.keySet()){
+			count = count + scenarioThreats.get(cl).size();
+		}
+		return count;
+	}
+	
+	public int getComponentNumber(){
+		return getComponents().size();
+	}
+	
+	public int getOldComponentNumber(){
+		if(oldScenario != null)
+			return oldScenario.getComponentNumber();
+		else return 0;
+	}
+	
+	public int getAddedComponentNumber(){
+		return evStep.getAddedComponents().size();
+	}
+	
+	public int getDeletedComponentNumber(){
+		return evStep.getDeletedComponents().size();
+	}
+	
+	public int getBuildingsNumber(){
+		int count = 0;
+		for(Component comp : getComponents()){
+			if(comp instanceof Building)
+				count++;
+		}
+		return count;
+	}
+	
+	public int getConnectionsNumber(){
+		int count = 0;
+		for(Component comp : getComponents()){
+			if(comp instanceof Connection)
+				count++;
+		}
+		return count;
+	}
+	
+	public int addedStructuralCount(){
+		int count = 0;
+		LinkedList<Threat> oldList;
+		if(oldScenario == null)
+			return structuralCount();
+		for(LinkedList<Component> cl : scenarioThreats.keySet()){
+			if(cl.size() == 1){
+				oldList = oldScenario.getExistingList(cl);
+				if(oldList == null)
+					count = count + scenarioThreats.get(cl).size();
+				else {
+					for(Threat t : scenarioThreats.get(cl)){
+						if(!oldList.contains(t))
+							count++;
+						}
+				}
+			}
+		}
+		return count;
+	}
+	
+	public int deletedStructuralCount(){
+		int count = 0;
+		LinkedList<Threat> newList;
+		if(oldScenario == null)
+			return 0;
+		for(LinkedList<Component> cl : oldScenario.getThreats().keySet()){
+			if(cl.size() == 1){
+				newList = getExistingList(cl);
+				if(newList == null){
+					count = count + oldScenario.getThreats().get(cl).size();
+				} else {
+					for(Threat t : oldScenario.getThreats().get(cl)){
+						if(!newList.contains(t))
+							count++;
+					}
+				}
+			}
+		}
+		return count;
+	}
+	
+	public int addedEmergingCount(){
+		int count = 0;
+		LinkedList<Threat> oldList;
+		if(oldScenario == null)
+			return emergingCount();
+		for(LinkedList<Component> cl : scenarioThreats.keySet()){
+			if(cl.size() > 1){
+				oldList = oldScenario.getExistingList(cl);
+				if(oldList == null)
+					count = count + scenarioThreats.get(cl).size();
+				else {
+					for(Threat t : scenarioThreats.get(cl)){
+						if(!oldList.contains(t))
+							count++;
+						}
+				}
+			}
+		}
+		return count;
+	}
+	
+	public int deletedEmergingCount(){
+		int count = 0;
+		LinkedList<Threat> newList;
+		if(oldScenario == null)
+			return 0;
+		for(LinkedList<Component> cl : oldScenario.getThreats().keySet()){
+			if(cl.size() > 1){
+				newList = getExistingList(cl);
+				if(newList == null){
+					count = count + oldScenario.getThreats().get(cl).size();
+				} else {
+					for(Threat t : oldScenario.getThreats().get(cl)){
+						if(!newList.contains(t))
+							count++;
+					}
+				}
+			}
+		}
+		return count;
+	}
+	
 	public void threatAnalysis() {
 		if(oldScenario != null)
-			scenarioThreats = oldScenario.getThreats();
+			scenarioThreats = cloneOldThreats();
 		else scenarioThreats = new HashMap<LinkedList<Component>, LinkedList<Threat>>();
 		for(Component comp : evStep.getDeletedComponents()){
 			deleteThreats(comp);
@@ -51,29 +182,73 @@ public class Scenario {
 		for(Component comp : evStep.getAddedComponents()){
 			addThreats(comp);
 		}
+		for(LinkedList<Component> cl : scenarioThreats.keySet()){
+			Collections.sort(scenarioThreats.get(cl));
+		}
 
 	}
 
+	@SuppressWarnings("unchecked")
+	private HashMap<LinkedList<Component>, LinkedList<Threat>> cloneOldThreats() {
+		HashMap<LinkedList<Component>, LinkedList<Threat>> cloned = new HashMap<LinkedList<Component>, LinkedList<Threat>>();
+		HashMap<LinkedList<Component>, LinkedList<Threat>> oldThreats = oldScenario.getThreats();
+		for(LinkedList<Component> cl : oldThreats.keySet()){
+			cloned.put((LinkedList<Component>)cl.clone(), (LinkedList<Threat>)oldThreats.get(cl).clone());
+		}
+		return cloned;
+	}
+
 	private void addThreats(Component comp) {
+		LinkedList<Threat> partialList;
 		HashMap<LinkedList<Component>, LinkedList<Threat>> emThreats;
 		LinkedList<Component> cList = new LinkedList<Component>();
 		cList.add(comp);
 		if(scenarioThreats.get(cList) == null)
 			scenarioThreats.put(cList, new LinkedList<Threat>());
-		for(Threat t : tManager.getCategoryThreats(comp)){
-			scenarioThreats.get(cList).add(t);
-		}
-		for(Threat t : tManager.getComponentThreats(comp)){
-			scenarioThreats.get(cList).add(t);
-		}
+		if(tManager.getCategoryThreats(comp) != null){
+			for(Threat t : tManager.getCategoryThreats(comp)){
+				scenarioThreats.get(cList).add(t);
+			}
+		} else AppLogger.logInfo(getClass(), "Unable to find category threats for " + comp.toString());
+		if(tManager.getComponentThreats(comp) != null){
+			for(Threat t : tManager.getComponentThreats(comp)){
+				scenarioThreats.get(cList).add(t);
+			}
+		} else AppLogger.logInfo(getClass(), "Unable to find component threats for " + comp.toString());
 		for(Component c : evStep.getAddedComponents()){
 			emThreats = emergingThreats(c);
 			for(LinkedList<Component> cl : emThreats.keySet()){
-				if(scenarioThreats.get(cl) == null)
-					scenarioThreats.put(cl, new LinkedList<Threat>());
-				scenarioThreats.get(cl).addAll(emThreats.get(cl));
+				partialList = getExistingList(cl);
+				if(partialList == null){
+					partialList = new LinkedList<Threat>();
+					scenarioThreats.put(cl, partialList);
+				} 
+				for(Threat t : emThreats.get(cl)){
+					if(!partialList.contains(t))
+						partialList.add(t);
+				}
 			}
 		}
+	}
+
+	private LinkedList<Threat> getExistingList(LinkedList<Component> currentList) {
+		boolean cont;
+		if(scenarioThreats.get(currentList) != null)
+			return scenarioThreats.get(currentList);
+		for(LinkedList<Component> cl : scenarioThreats.keySet()){
+			if(cl.size() == currentList.size()){
+				cont = true;
+				for(Component c : currentList){
+					if(!cl.contains(c)){
+						cont = false;
+						break;
+					}
+				}
+				if(cont)
+					return scenarioThreats.get(cl);
+			}
+		}
+		return null;
 	}
 
 	private HashMap<LinkedList<Component>, LinkedList<Threat>> emergingThreats(Component comp) {
@@ -170,9 +345,27 @@ public class Scenario {
 			scenarioThreats.remove(cl);
 		}
 	}
+	
+	public int emergingCount(){
+		int count = 0;
+		for(LinkedList<Component> cl : scenarioThreats.keySet()){
+			if(cl.size() > 1)
+				count = count + scenarioThreats.get(cl).size();
+		}
+		return count;
+	}
+	
+	public int structuralCount(){
+		int count = 0;
+		for(LinkedList<Component> cl : scenarioThreats.keySet()){
+			if(cl.size() == 1)
+				count = count + scenarioThreats.get(cl).size();
+		}
+		return count;
+	}
 
 	public LinkedList<Component> getComponents() {
-		LinkedList<Component> completeList = new LinkedList<Component>();
+		LinkedList<Component> completeList = new LinkedList<Component>();	
 		completeList.addAll(scenarioComponents);
 		completeList.addAll(evStep.getAddedComponents());
 		completeList.removeAll(evStep.getDeletedComponents());
@@ -202,18 +395,26 @@ public class Scenario {
 			writer = new BufferedWriter(new FileWriter(new File(outFolder + "/" + getName() + ".summary")));
 			writer.write("* Components\n");
 			for(Component comp : getComponents()){
-				writer.write(comp.toString() + "\n");
+				if(!(comp instanceof Connection))
+					writer.write("BLD#" + comp.toString() + "\n");
 			}
-			writer.write("\n* Threats\n");
+			for(Component comp : getComponents()){
+				if(comp instanceof Connection)
+					writer.write("CON#" + comp.toString() + "\n");
+			}
+			writer.write("\n* Structural Threats\n");
+			for(LinkedList<Component> cl : scenarioThreats.keySet()){
+				if(cl.size() == 1)
+					writer.write("STR#" + cl.toString() + "#" + scenarioThreats.get(cl).toString() + "\n");
+			}
+			writer.write("\n* Emerging Threats\n");
 			for(LinkedList<Component> cl : scenarioThreats.keySet()){
 				if(cl.size() > 1)
-					writer.write("EM#");
-				else writer.write("STR#");
-				writer.write(cl.toString() + "#" + scenarioThreats.get(cl).toString() + "\n");
+					writer.write("EM#" + cl.toString() + "#" + scenarioThreats.get(cl).toString() + "\n");
 			}
 			writer.close();
 		} catch(Exception ex){
-			
+			AppLogger.logException(getClass(), ex, "Unable to write scenario summary file");
 		}
 	}
 

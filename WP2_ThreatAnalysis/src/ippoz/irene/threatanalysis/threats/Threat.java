@@ -7,7 +7,7 @@ package ippoz.irene.threatanalysis.threats;
  * @author Tommy
  *
  */
-public class Threat {
+public class Threat implements Comparable<Threat>{
 	
 	private int index;
 	private String name;
@@ -39,7 +39,12 @@ public class Threat {
 
 	@Override
 	public String toString() {
-		return "Threat [index=" + index + ", category=" + category + "]";
+		return String.valueOf(index);
+	}
+
+	@Override
+	public int compareTo(Threat other) {
+		return Integer.compare(index, other.getIndex());
 	}
 
 }

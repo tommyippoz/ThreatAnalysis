@@ -24,9 +24,11 @@ import colibri.lib.TreeRelation;
  */
 public class FcaBuilder {
 
+	private String outFolder;
 	private Relation relation;
 	
-	public FcaBuilder(){
+	public FcaBuilder(String outFolder){
+		this.outFolder = outFolder;
 		relation = new TreeRelation();
 	}
 	
@@ -58,7 +60,7 @@ public class FcaBuilder {
 	    	index++;		    	
 	    }
 	    try {
-		    writer = new PrintWriter("fcaGraphic.cex", "UTF-8");
+		    writer = new PrintWriter(outFolder + "/fcaGraphic.cex", "UTF-8");
 			writer.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?><ConceptualSystem><Version MajorNumber=\"1\" MinorNumber=\"0\" />");
 			writer.println("<Contexts><Context Identifier=\"0\" Type=\"Binary\"><Attributes>");
 			for(int i=0;i<inverted.keySet().size();i++){
@@ -66,13 +68,17 @@ public class FcaBuilder {
 			}
 			writer.println("</Attributes><Objects>");
 			for(Scenario scenario : scenarioList){
-				atts = relation.getAttributes(scenario.getName());
-				writer.println("<Object><Name>" + scenario.getName() + "</Name><Intent>");
-				while (atts.hasNext()){
-					Object element = atts.next(); 
-					writer.println("<HasAttribute AttributeIdentifier=\"" + idAtt.get(element) + "\" />");
+				try {
+					atts = relation.getAttributes(scenario.getName());
+					writer.println("<Object><Name>" + scenario.getName() + "</Name><Intent>");
+					while (atts.hasNext()){
+						Object element = atts.next(); 
+						writer.println("<HasAttribute AttributeIdentifier=\"" + idAtt.get(element) + "\" />");
+					}
+				    writer.println("</Intent></Object>");
+				} catch(Exception ex){
+					AppLogger.logInfo(getClass(), "No Threats associated with scenario '" + scenario.getName() + "'");
 				}
-			    writer.println("</Intent></Object>");
 			}				    
 		    writer.println("</Objects></Context></Contexts><RecalculationPolicy Value=\"Clear\" /><Lattices /></ConceptualSystem>");
 		    writer.close();

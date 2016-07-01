@@ -1,0 +1,15 @@
+* Additions
+
+* Components
+ADD,OD,Offices District
+
+* Connections
+ADD,EC,C_OD_[C_F_PS2],Offices District;C_F_PS2
+
+* Remotions
+DEL,O,Office 1
+DEL,O,Office 2
+
+* Components
+
+* Connections

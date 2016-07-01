@@ -55,6 +55,8 @@ public abstract class Component {
 				return null;
 		}
 	}
+	
+	public abstract boolean relatedTo(Component dc);
 
 	@Override
 	public abstract String toString();

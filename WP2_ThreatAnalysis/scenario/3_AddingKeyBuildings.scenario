@@ -1,0 +1,16 @@
+* Additions
+
+* Components
+ADD,PVG,Photo Voltaic
+ADD,H,Hospital
+
+* Connections
+ADD,EC,C_PVG_PS2,Photo Voltaic;Substation 2
+ADD,EC,C_H_PS2,Hospital;Substation 2
+
+* Remotions
+
+* Components
+DEL,PP,Power Plant
+
+* Connections

@@ -14,6 +14,8 @@ import java.util.HashMap;
  */
 public class PreferencesManager {
 	
+	private boolean readOK; 
+	
 	/** The map of the preferences. */
 	private HashMap<String, String> preferences;
 	
@@ -25,9 +27,17 @@ public class PreferencesManager {
 	public PreferencesManager(File prefFile){
 		try {
 			preferences = AppUtility.loadPreferences(prefFile, null);
+			if(preferences.size() > 0)
+				readOK = true;
+			else readOK = false;
 		} catch (IOException ex) {
 			AppLogger.logException(getClass(), ex, "Unable to load main preferences file");
+			readOK = false;
 		}
+	}
+	
+	public boolean correctlyRead(){
+		return readOK;
 	}
 	
 	/**

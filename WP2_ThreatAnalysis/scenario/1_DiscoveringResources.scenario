@@ -1,0 +1,15 @@
+* Additions
+
+* Components
+ADD,SB,Special Building
+ADD,SH,SH 3
+
+* Connections
+ADD,EC,C_SB_PS2,Substation 2;Special Building
+ADD,EC,C_SH3_PS1,SH 3;Substation 1
+
+* Remotions
+
+* Components
+
+* Connections

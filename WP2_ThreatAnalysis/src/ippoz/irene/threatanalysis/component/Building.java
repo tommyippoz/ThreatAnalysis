@@ -18,4 +18,11 @@ public class Building extends Component {
 		return getName();
 	}
 
+	@Override
+	public boolean relatedTo(Component dc) {
+		if(dc instanceof Connection && ((Connection)dc).relatedTo(this))
+			return true;
+		else return false;
+	}
+
 }
