@@ -69,9 +69,11 @@ public class Main {
 		File scenarioFolderFile = new File(scenarioFolder);
 		LinkedList<EvolutionStep> eStep = new LinkedList<EvolutionStep>();
 		if(scenarioFolderFile.exists()){
-			for(File evStepFile : scenarioFolderFile.listFiles()){
-				if(evStepFile.getName().endsWith(".scenario")){
-					eStep.add(new EvolutionStep(evStepFile));
+			if(scenarioFolderFile != null && scenarioFolderFile.listFiles() != null){
+				for(File evStepFile : scenarioFolderFile.listFiles()){
+					if(evStepFile != null && evStepFile.getName().endsWith(".scenario")){
+						eStep.add(new EvolutionStep(evStepFile));
+					}
 				}
 			}
 		}

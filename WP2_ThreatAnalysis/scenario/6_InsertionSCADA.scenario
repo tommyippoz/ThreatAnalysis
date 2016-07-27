@@ -1,10 +1,13 @@
 * Additions
 
 * Components
+ADD,SCADA,SCADA
 
 * Connections
+ADD,EC,C_SCADA_[C_F_PS2],SCADA;C_F_PS2
 
 * Remotions
+DEL,BDC,Basic Data Centre
 
 * Components
 

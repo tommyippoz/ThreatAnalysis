@@ -1,9 +1,10 @@
 * Additions
 
 * Components
+ADD,CP,Charging Point
 
 * Connections
-
+ADD,EC,C_CP_PS1,Charging Point;Substation 1
 * Remotions
 
 * Components

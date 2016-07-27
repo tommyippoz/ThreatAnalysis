@@ -390,6 +390,11 @@ public class Scenario {
 	}
 	
 	public void print(String outFolder) {
+		printSummary(outFolder);
+		printEmerging(outFolder);
+	}
+	
+	private void printSummary(String outFolder){
 		BufferedWriter writer;
 		try {
 			writer = new BufferedWriter(new FileWriter(new File(outFolder + "/" + getName() + ".summary")));
@@ -411,6 +416,32 @@ public class Scenario {
 			for(LinkedList<Component> cl : scenarioThreats.keySet()){
 				if(cl.size() > 1)
 					writer.write("EM#" + cl.toString() + "#" + scenarioThreats.get(cl).toString() + "\n");
+			}
+			writer.close();
+		} catch(Exception ex){
+			AppLogger.logException(getClass(), ex, "Unable to write scenario summary file");
+		}
+	}
+	
+	private void printEmerging(String outFolder){
+		BufferedWriter writer;
+		LinkedList<LinkedList<Component>> matchingCompLists;
+		try {
+			writer = new BufferedWriter(new FileWriter(new File(outFolder + "/" + getName() + "_emerging.csv")));
+			writer.write("Threat##Occurrences#\n");
+			writer.write("Index#Description#Count#List\n");
+			for(Threat et : tManager.listEmergingThreats()){
+				matchingCompLists = new LinkedList<LinkedList<Component>>();
+				writer.write(et.getIndex() + "#" + et.getName() + "#");
+				for(LinkedList<Component> cl : scenarioThreats.keySet()){
+					if(cl.size() > 1 && scenarioThreats.get(cl).contains(et))
+						matchingCompLists.add(cl);
+				}
+				writer.write(matchingCompLists.size() + "#");
+				for(LinkedList<Component> cl : matchingCompLists){
+					writer.write(cl.toString() + "|");
+				}
+				writer.write("\n");
 			}
 			writer.close();
 		} catch(Exception ex){

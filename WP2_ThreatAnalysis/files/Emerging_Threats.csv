@@ -99,3 +99,23 @@ IRENE Index,Involved Components,Description
 17,CP; MG,If the permissions are not strict enough or the mechanisms to regulate the opening or closing of the channels/ports have some type of lack; the grid can incur in supply problems due to this component.
 21,CP; MG,Since this point has a key role regarding the citizen satisfaction or grid efficiency; can be targeted from DoS attacks aimed o corrupt its correct behaviour.
 31,CP; MG,If the supply of energy is not well regulated; an attacker can leech a huge amount of energy from the charging point stealing it to the near homes or other components.
+9,SH; DC,The improvement of smartness of the grid allowing communications and exchange of data from/to mobile devices can lead to expose the grid to new attacks that take advantage of some lack of permmissions or wrong configurations related to mobile access.
+10,SH; DC,Tunnels opened from mobile devices can be left opened erroneously from the user and not detected by mobile devices security techniques; that are not currently well developed as the desktop ones.
+11,SH; DC,The improvement of smartness of the grid allowing communications and exchange of data from/to mobile devices can lead to expose the grid to new attacks that take advantage of known mobile vulnerabilities.
+12,SH; DC,Since now communications can be established between mobile device and the grid; new vulnerabilities are introduced such as the protection of  tunnels opened by mobile devices.
+15,SH; DC,Communications between smart devices and the grid; as for example specific micro grids; can be intercepted
+16,SH; DC,Wireless jamming can now be conducted from mobile devices owned by the citizens against different components of the grid; such as micro grids that own the energy sources; with the target to compromise the supply of energy
+17,SH; DC,Some ports can be left opened by diifferent non well coded apps running on the mobile devices and exploited by the attacker.
+20,SH; EC,The vulnerabilities and the chances to get useful infromation looking at specific areas of memory in the mobile device can be used to conduct cyber-physical attacks. 
+21,SH; DC,Communications between smart devices and the grid; as for example specific micro grids; can be corrupted inserting wrong informations or blocking the packets 
+24,SH; DC,The vulnerabilities and the chances to get useful infromation looking at specific areas of memory in the mobile device can be used to obtain unauthorized access to facilites.
+29,SH; DC,Mobile users can share any type of information using instant messaging; mail ?; giving the observer several opportunities to catch them.
+31,MG; EC,Since now several different micro grids are installed in the smart grid; they can fight to acquire alll the needed energy eventually stealing it to other sources.
+37,SH; DC,Some of the new vulnerabilities can come from the apps and kernel modules of mobile devices.
+9,CP; DC,If the authentication policies are not strict enough or the permissions for the charging of veichles have some type of lack; the grid can incur in supply problems due to this component.
+10,CP; DC,If the process that manages the opening or closing of the channels/ports has some type of lack; the grid can incur in supply problems due to this component.
+12,CP; DC,The charging point can introduce a lot of vulnerabilities; such as ones related to authentication
+15,CP; DC,Feedbacks or requests coming from/to the charging point can be intercepted to annoy the correct behaviour of the system.
+17,CP; DC,If the permissions are not strict enough or the mechanisms to regulate the opening or closing of the channels/ports have some type of lack; the grid can incur in supply problems due to this component.
+21,CP; DC,Since this point has a key role regarding the citizen satisfaction or grid efficiency; can be targeted from DoS attacks aimed o corrupt its correct behaviour.
+31,CP; EC,If the supply of energy is not well regulated; an attacker can leech a huge amount of energy from the charging point stealing it to the near homes or other components.

@@ -32,7 +32,7 @@ public class AppUtility {
 			reader = new BufferedReader(new FileReader(prefFile));
 			while(reader.ready()){
 				readed = reader.readLine();
-				if(readed.length() > 0) {
+				if(readed != null && readed.length() > 0) {
 					if(readed.contains("=") && readed.split("=").length == 2){
 						tag = readed.split("=")[0];
 						value = readed.split("=")[1];

@@ -2,7 +2,7 @@
 
 * Components
 ADD,PP,Power Plant
-ADD,F,Factory
+ADD,F,Factory 
 ADD,SH,SH 1
 ADD,SH,SH 2
 ADD,PS,Substation 1

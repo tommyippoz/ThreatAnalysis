@@ -104,7 +104,7 @@ public class EvolutionStep {
 		if(splitted != null && (splitted.length == 3 || splitted.length == 4)){
 			comp = buildComponent(splitted, oldScenario);
 			if(comp != null){
-				switch(splitted[0]){
+				switch(splitted[0].trim()){
 					case "ADD":
 						addedComponents.add(comp);
 						break;
@@ -123,17 +123,19 @@ public class EvolutionStep {
 	private Component buildComponent(String[] splitted, Scenario oldScenario) {
 		ComponentType cType;
 		try {
-			cType = ComponentType.valueOf(splitted[1]);
-			if(getComponent(splitted[2], oldScenario) != null){
-				return getComponent(splitted[2], oldScenario);
+			cType = ComponentType.valueOf(splitted[1].trim());
+			if(getComponent(splitted[2].trim(), oldScenario) != null){
+				return getComponent(splitted[2].trim(), oldScenario);
 			}
 			if(Component.getCategoryOf(cType).equals(ComponentCategory.CON)){
-				if(getComponent(splitted[3].split(";")[0].trim(), oldScenario) != null && getComponent(splitted[3].split(";")[1].trim(), oldScenario) != null)
-					return new Connection(splitted[2], cType, getComponent(splitted[3].split(";")[0].trim(), oldScenario), getComponent(splitted[3].split(";")[1].trim(), oldScenario));
-				else {
-					AppLogger.logInfo(getClass(), "Ignored component: " + splitted[2]);
-				}
-			} else return new Building(splitted[2], cType);
+				if(splitted[3] != null && splitted[3].contains(";") && splitted[3].split(";").length == 2) {
+					if(getComponent(splitted[3].trim().split(";")[0].trim(), oldScenario) == null) {
+						AppLogger.logInfo(getClass(), "Ignored component: " + splitted[2] + " due to unrecognized '"  + splitted[3].split(";")[0].trim() + "' constituent component");
+					} else if(getComponent(splitted[3].trim().split(";")[1].trim(), oldScenario) == null){
+						AppLogger.logInfo(getClass(), "Ignored component: " + splitted[2] + " due to unrecognized '"  + splitted[3].split(";")[1].trim() + "' constituent component");
+					} else return new Connection(splitted[2].trim(), cType, getComponent(splitted[3].trim().split(";")[0].trim(), oldScenario), getComponent(splitted[3].split(";")[1].trim(), oldScenario));
+				} else AppLogger.logError(getClass(), "WrongConstituentComponents", "Unable to parse '" + splitted[3] + "': specify 2 component names separated by ;");
+			} else return new Building(splitted[2].trim(), cType);
 		} catch(Exception ex){
 			AppLogger.logError(getClass(), "WrongComponentCategory", "Category '" + splitted[1] + "' is unknown: please check the valid ones");
 		}

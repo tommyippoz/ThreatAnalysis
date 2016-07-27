@@ -206,7 +206,7 @@ public class ThreatManager {
 					readed = readed.trim();
 					if(readed.length() > 0){
 						splitted = readed.split(",");
-						threatList.add(new Threat(Integer.parseInt(splitted[2].trim()), splitted[3].trim(), splitted[4].trim(), ThreatCategory.valueOf(splitted[0].trim())));
+						threatList.add(new Threat(Integer.parseInt(splitted[2].trim()), splitted[3].trim(), splitted[4].trim(), ThreatCategory.valueOf(splitted[0].trim()), splitted[5].equals("1") ? true : false));
 					}
 				}
 			}
@@ -282,6 +282,15 @@ public class ThreatManager {
 		return componentThreats.get(comp.getCompType());
 	}
 
+	public LinkedList<Threat> listEmergingThreats() {
+		LinkedList<Threat> et = new LinkedList<Threat>();
+		for(Threat t : threatList){
+			if(t.canEmerge())
+				et.add(t);
+		}
+		return et;
+	}
+	
 	public HashMap<LinkedList<ComponentType>, LinkedList<Threat>> getEmergingThreats(Component comp) {
 		HashMap<LinkedList<ComponentType>, LinkedList<Threat>> ect = new HashMap<LinkedList<ComponentType>, LinkedList<Threat>>();
 		for(LinkedList<ComponentType> ctl : emergingThreats.keySet()){
