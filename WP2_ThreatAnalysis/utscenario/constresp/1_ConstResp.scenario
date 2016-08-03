@@ -1,0 +1,21 @@
+* Additions
+
+* Components
+ADD,CP,Charging Point
+ADD,SCADA,SCADA
+ADD,DES,Storage
+
+* Connections
+ADD,EC,[PS1_O]_DES,PS1_O;Storage
+ADD,EC,[PS1_O]_CP,PS1_O;Charging Point
+
+ADD,DC,[AP_O]_SCADA,AP_O;SCADA
+ADD,DC,[AP_O]_DES,AP_O;Storage
+
+* Remotions
+
+* Components
+
+DEL,BDC,Data Center
+
+* Connections

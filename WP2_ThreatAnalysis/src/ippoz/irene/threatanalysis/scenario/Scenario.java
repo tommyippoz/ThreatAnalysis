@@ -428,18 +428,22 @@ public class Scenario {
 		LinkedList<LinkedList<Component>> matchingCompLists;
 		try {
 			writer = new BufferedWriter(new FileWriter(new File(outFolder + "/" + getName() + "_emerging.csv")));
-			writer.write("Threat##Occurrences#\n");
-			writer.write("Index#Description#Count#List\n");
+			writer.write("Threat,,Occurrences,\n");
+			writer.write("Index,Description,Count,List\n");
 			for(Threat et : tManager.listEmergingThreats()){
 				matchingCompLists = new LinkedList<LinkedList<Component>>();
-				writer.write(et.getIndex() + "#" + et.getName() + "#");
+				writer.write(et.getIndex() + "," + et.getName() + ",");
 				for(LinkedList<Component> cl : scenarioThreats.keySet()){
 					if(cl.size() > 1 && scenarioThreats.get(cl).contains(et))
 						matchingCompLists.add(cl);
 				}
-				writer.write(matchingCompLists.size() + "#");
+				writer.write(matchingCompLists.size() + ",");
 				for(LinkedList<Component> cl : matchingCompLists){
-					writer.write(cl.toString() + "|");
+					writer.write("(");
+					for(Component c : cl){
+						writer.write(c.toString() + ";");
+					}
+					writer.write(") | ");
 				}
 				writer.write("\n");
 			}

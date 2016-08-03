@@ -1,0 +1,21 @@
+* Additions
+
+* Components
+ADD,PVG,Photo Voltaic
+ADD,SH,SH 2
+ADD,DES,Storage
+
+* Connections
+ADD,EC,SH2_PS1,SH 2;Substation 1
+ADD,EC,PS2_PP,Substation 2;Photo Voltaic
+ADD,EC,[PS1_O]_DES,PS1_O;Storage
+
+ADD,DC,[AP_O]_DES,AP_O;Storage
+
+* Remotions
+
+* Components
+
+DEL,PP,Power Plant
+
+* Connections
