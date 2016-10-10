@@ -4,11 +4,11 @@
 FILE_FOLDER = files
 
 * relative path of the folder of the source scenarios
-SCENARIO_FOLDER = utscenario/bestend
+SCENARIO_FOLDER = intvalscenario
 
 * relative path of the output folder
 OUTPUT_FOLDER = ../../git_data/IRENE
 
 * Filters for the threats considered in the analysis.
 * Accepted filters are categories (e.g., CCAT), intervals (e.g., 11-20) or single indexes (e.g., 1;4;10;23) separated by commas
-THREAT_FILTER = 6;10;12;18;21;30;31
+THREAT_FILTER = ALL
