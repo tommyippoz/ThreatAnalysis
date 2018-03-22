@@ -29,6 +29,7 @@ public class Main {
 	public static void main(String[] args) {
 		PreferencesManager pManager;
 		Analyzer tAnalyzer;
+		long startTime = System.currentTimeMillis();
 		try {
 			pManager = new PreferencesManager("threat_analysis.preferences");
 			if(checkPreferences(pManager)){
@@ -39,6 +40,7 @@ public class Main {
 				AppLogger.logInfo(Main.class, "Reporting outputs");
 				tAnalyzer.report();
 				tAnalyzer.flush();
+				AppLogger.logInfo(Main.class, "Total Execution time: " + (System.currentTimeMillis() - startTime) + " ms");
 			} 
 		} catch(Exception ex){
 			AppLogger.logException(Main.class, ex, "Generic Exception");

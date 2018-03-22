@@ -4,6 +4,7 @@ CON,3,Connection can be surveilled to get information about vulnerabilities
 CON,6,Connection can be sniffed to collect data related to network traffic
 CON,15,Communications can be intercepted directly from the link
 CON,19,Communications can be broke up by physical attacks aimed to interrupt the exchange of data
+CON,31,-
 EP,3,Since energy providers are key buildings; a surveillance could be lead to undestand vulnerabilities of the system.
 EP,5,Since energy providers can have huge support coming from software systems depending on the functionality; adversary mmight want to deliver malware into that software
 EP,6,Energy Providers need to communicate with the grid to understand useful indications about the generation of energy; so a sniffer activity colud reveal lot of information about policies
@@ -11,6 +12,7 @@ EP,7,Energy providers works with employers; and subverted individuals can act th
 EP,8,Energy providers works with employers; and the access of authorized staff can be exploited
 EP,14,Control software could be targeted especially due to its criticality
 EP,19,Since energy providers are physical buildings; physical attacks could be lead with success
+EP,20,Since energy providers are physical buildings; physical attacks could be lead with success
 EP,22,Energy providers works with employers; and their devices could be compromised with the aim to reveal critical information
 EP,26,Due to the complexity and the relevance of the tasks performed by the energy provider; multi - staged attacks can be conducted to defeat protections against attackers
 EP,27,Since in the city scenario multiple organizations that provides energy are working simoultaneously; the attacker can try to observe different companies to acquire useful data to break defenses of target provider

@@ -1,24 +1,17 @@
 * Additions
 
 * Components
-ADD,SCADA,SCADA
 ADD,SH,SH 2
 ADD,SH,SH 3
 ADD,PVG,PV 1
-ADD,PVG,PV 2
 
 * Connections
 ADD,EC,SH2_PS1,SH 2;Substation 1
 ADD,EC,SH3_PS1,SH 3;Substation 1
 ADD,EC,PV1_PS1,PV 1;Substation 1
-ADD,EC,PV2_PS2,PV 2;Substation 2
-
-ADD,DC,[AP_O]_SCADA,AP_O;SCADA
 
 * Remotions
 
 * Components
-
-DEL,BDC,Data Center
 
 * Connections

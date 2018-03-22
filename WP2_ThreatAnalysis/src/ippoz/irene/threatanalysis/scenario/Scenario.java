@@ -391,6 +391,7 @@ public class Scenario {
 	
 	public void print(String outFolder) {
 		printSummary(outFolder);
+		printStructural(outFolder);
 		printEmerging(outFolder);
 	}
 	
@@ -423,13 +424,43 @@ public class Scenario {
 		}
 	}
 	
+	private void printStructural(String outFolder){
+		BufferedWriter writer;
+		LinkedList<LinkedList<Component>> matchingCompLists;
+		try {
+			writer = new BufferedWriter(new FileWriter(new File(outFolder + "/" + getName() + "_structural.csv")));
+			writer.write("Threat,,,Occurrences,\n");
+			writer.write("Index,Description,Mitigations,Count,List\n");
+			for(Threat et : tManager.listStructuralThreats()){
+				matchingCompLists = new LinkedList<LinkedList<Component>>();
+				writer.write(et.getIndex() + "," + et.getName() + ",");
+				for(LinkedList<Component> cl : scenarioThreats.keySet()){
+					if(cl.size() == 1 && scenarioThreats.get(cl).contains(et))
+						matchingCompLists.add(cl);
+				}
+				writer.write(tManager.getMitigationsFor(et).size() + "," + matchingCompLists.size() + ",");
+				for(LinkedList<Component> cl : matchingCompLists){
+					writer.write("(");
+					for(Component c : cl){
+						writer.write(c.toString() + ";");
+					}
+					writer.write(") | ");
+				}
+				writer.write("\n");
+			}
+			writer.close();
+		} catch(Exception ex){
+			AppLogger.logException(getClass(), ex, "Unable to write scenario summary file");
+		}
+	}
+	
 	private void printEmerging(String outFolder){
 		BufferedWriter writer;
 		LinkedList<LinkedList<Component>> matchingCompLists;
 		try {
 			writer = new BufferedWriter(new FileWriter(new File(outFolder + "/" + getName() + "_emerging.csv")));
-			writer.write("Threat,,Occurrences,\n");
-			writer.write("Index,Description,Count,List\n");
+			writer.write("Threat,,,Occurrences,\n");
+			writer.write("Index,Description,Mitigations,Count,List\n");
 			for(Threat et : tManager.listEmergingThreats()){
 				matchingCompLists = new LinkedList<LinkedList<Component>>();
 				writer.write(et.getIndex() + "," + et.getName() + ",");
@@ -437,7 +468,7 @@ public class Scenario {
 					if(cl.size() > 1 && scenarioThreats.get(cl).contains(et))
 						matchingCompLists.add(cl);
 				}
-				writer.write(matchingCompLists.size() + ",");
+				writer.write(tManager.getMitigationsFor(et).size() + "," + matchingCompLists.size() + ",");
 				for(LinkedList<Component> cl : matchingCompLists){
 					writer.write("(");
 					for(Component c : cl){

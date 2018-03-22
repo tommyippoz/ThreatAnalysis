@@ -166,6 +166,10 @@ public class ThreatManager {
 			AppLogger.logException(getClass(), ex, "Unable to load threats");
 		}
 	}
+	
+	public LinkedList<Mitigation> getMitigationsFor(Threat t){
+		return threatMitigation.get(t);
+	}
 
 	private void loadMitigationList(File targetFile) {
 		String readed;
@@ -280,6 +284,10 @@ public class ThreatManager {
 	
 	public LinkedList<Threat> getComponentThreats(Component comp) {
 		return componentThreats.get(comp.getCompType());
+	}
+	
+	public LinkedList<Threat> listStructuralThreats() {
+		return threatList;
 	}
 
 	public LinkedList<Threat> listEmergingThreats() {

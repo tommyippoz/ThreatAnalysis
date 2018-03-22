@@ -1,0 +1,22 @@
+* Additions
+
+* Components
+ADD,DES,Storage
+ADD,SB,ApartmentBlock
+ADD,SB,EV Parking
+ADD,SB,Supermarket
+ADD,O,Office
+ADD,SH,SH
+
+* Connections
+ADD,EC,c_main,Storage;SH
+ADD,DC,c_ab,c_main;ApartmentBlock
+ADD,DC,c_ev,c_main;EV Parking
+ADD,DC,c_s,c_main;Supermarket
+ADD,DC,c_o,c_main;Office
+
+* Remotions
+
+* Components
+
+* Connections

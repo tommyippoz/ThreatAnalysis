@@ -1,0 +1,28 @@
+* Additions
+
+* Components
+ADD,PP,Power Plant
+ADD,O,Office 
+ADD,SH,SH 1
+ADD,SH,SH 2
+ADD,SH,SH 3
+ADD,PS,Substation HM
+ADD,PS,Substation ML
+ADD,H,Outpatient Clinic
+ADD,SB,Supermarket
+
+* Connections
+ADD,EC,SH1_SS,SH 1;Substation ML
+ADD,EC,SH2_SS,SH 2;Substation ML
+ADD,EC,SH3_SS,SH 3;Substation ML
+ADD,EC,PS_O,Substation HM;Office
+ADD,EC,PS_H,Substation HM;Outpatient Clinic
+ADD,EC,PS_PP,Substation HM;Power Plant
+ADD,EC,PS_SB,Substation HM;Supermarket
+ADD,EC,[PS_SB]_SS,PS_SB;Substation ML
+
+* Remotions
+
+* Components
+
+* Connections

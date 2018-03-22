@@ -4,7 +4,7 @@
 FILE_FOLDER = files
 
 * relative path of the folder of the source scenarios
-SCENARIO_FOLDER = intvalscenario
+SCENARIO_FOLDER = scenarios/d52/studentA
 
 * relative path of the output folder
 OUTPUT_FOLDER = ../../git_data/IRENE

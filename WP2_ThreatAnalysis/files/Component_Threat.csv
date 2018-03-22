@@ -7,6 +7,7 @@ MG,31,"A micro grid can have specific setups about the permissions and protocols
 MG,37,"When a service speciic of micro grid is updated, vulnerabilities can be inserted into that software"
 PS,-,-
 LRC,-,-
+CB,-,-
 F,5,"Factories are key buildings, so adversaries could want to deliver malware to compromise / observe key functionalities"
 F,13,"Factories are key buildings, so adversaries could want to comprimise the update process of a component"
 F,22,"Factories are key buildings, so adversaries could want to compromise the devices of the employers, trying to obtain key information"

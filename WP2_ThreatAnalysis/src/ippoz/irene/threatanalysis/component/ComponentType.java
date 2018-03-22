@@ -29,6 +29,7 @@ public enum ComponentType {
 	
 	// Interconnections
 	PS,
+	CB,
 	LRC,
 	
 	// Data Center

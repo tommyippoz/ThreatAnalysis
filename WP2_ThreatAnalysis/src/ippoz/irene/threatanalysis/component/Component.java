@@ -33,6 +33,7 @@ public abstract class Component {
 			case F:
 			case H:
 			case LRC:
+			case CB:
 			case O:
 			case OD:
 			case PS:

@@ -1,0 +1,17 @@
+* Additions
+
+* Components
+
+ADD,PVG,PV 2
+
+* Connections
+
+ADD,EC,PV2_PS2,PV 2;Substation 2
+
+* Remotions
+
+* Components
+
+DEL,PP,Power Plant
+
+* Connections

@@ -1,0 +1,13 @@
+* Additions
+
+* Components
+ADD,PVG,PhotoVoltaic
+
+* Connections
+ADD,DC,c_pv,c_main;PhotoVoltaic
+
+* Remotions
+
+* Components
+
+* Connections

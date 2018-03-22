@@ -1,0 +1,18 @@
+* Additions
+
+* Components
+ADD,WF,Wind Farm
+ADD,DES,Storage
+ADD,PVG,PV
+
+* Connections
+ADD,EC,DES_PS,Storage;Substation HM
+ADD,EC,WF_PS,Wind Farm;Substation HM
+ADD,EC,PV_[PS_SB],PV;PS_SB
+
+* Remotions
+
+* Components
+DEL,PP,Power Plant
+
+* Connections

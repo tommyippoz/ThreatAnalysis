@@ -1,0 +1,107 @@
+* Additions
+
+* General Components
+ADD,CB,CB_Node1
+ADD,CB,CB_Node2
+ADD,CB,CB_Node3
+ADD,CB,CB_Node4
+ADD,CB,CB_Node5
+ADD,CB,CB_Node11
+ADD,CB,CB_Node12
+ADD,CB,CB_MidLevel
+ADD,CB,CB_HighLevel
+
+ADD,PS,LowToMid
+ADD,PS,MidToHigh
+
+ADD,EC,CB1_CB2,CB_Node1;CB_Node2
+ADD,EC,CB3_CB2,CB_Node3;CB_Node2
+ADD,EC,CB3_CB4,CB_Node3;CB_Node4
+ADD,EC,CBMid_CB4,CB_MidLevel;CB_Node4
+ADD,EC,CBMid_CB5,CB_MidLevel;CB_Node5
+ADD,EC,CBMid_CBHigh,CB_MidLevel;CB_HighLevel
+ADD,EC,CB11_CBHigh,CB_Node11;CB_HighLevel
+ADD,EC,CB12_CBHigh,CB_Node12;CB_HighLevel
+
+ADD,EC,CBMid_SS,CB_MidLevel;LowToMid
+ADD,EC,CBHigh_PS,CB_HighLevel;MidToHigh
+
+* Node 1
+
+ADD,SH,Smart Homes
+ADD,PVG,N1DG1
+ADD,PVG,N1DG2
+
+ADD,MG,N1_SH,Smart Homes;CB_Node1
+ADD,MG,N1_DG1,N1DG1;CB_Node1
+ADD,MG,N1_DG2,N1DG2;CB_Node1
+
+* Node 2
+
+ADD,O,Office
+ADD,PVG,N2DG1
+ADD,PVG,N2DG2
+ADD,PVG,N2DG3
+ADD,DES,N2_Storage
+
+ADD,MG,N2_O,Office;CB_Node2
+ADD,MG,N2_DG1,N2DG1;CB_Node2
+ADD,MG,N2_DG2,N2DG2;CB_Node2
+ADD,MG,N2_DG3,N2DG3;CB_Node2
+ADD,MG,N2_DES,N2_Storage;CB_Node2
+
+* Node 3
+
+ADD,H,Hospital
+ADD,PVG,N3DG1
+ADD,PVG,N3DG2
+ADD,PVG,N3DG3
+ADD,DES,N3_Storage
+
+ADD,MG,N3_H,Hospital;CB_Node3
+ADD,MG,N3_DG1,N3DG1;CB_Node3
+ADD,MG,N3_DG2,N3DG2;CB_Node3
+ADD,MG,N3_DG3,N3DG3;CB_Node3
+ADD,MG,N3_DES,N3_Storage;CB_Node3
+
+* Node 4
+
+ADD,SB,Warehouse
+ADD,PVG,N4DG1
+ADD,PVG,N4DG2
+
+ADD,EC,N4_WH,Warehouse;CB_Node4
+ADD,MG,N4_DG1,N4DG1;CB_Node4
+ADD,EC,N4_DG2,N4DG2;CB_Node4
+
+* Node 5
+
+ADD,SB,Supermarket
+ADD,PVG,N5DG1
+ADD,PVG,N5DG2
+
+ADD,EC,N5_MKT,Supermarket;CB_Node5
+ADD,MG,N5_DG1,N5DG1;CB_Node5
+ADD,EC,N5_DG2,N5DG2;CB_Node5
+
+* Node 11
+
+ADD,F,Factory
+ADD,WF,WindFarm Station 1
+ADD,WF,WindFarm Station 2
+
+ADD,MG,N11_F,Factory;CB_Node11
+ADD,MG,N12_WF1,WindFarm Station 1;CB_Node11
+ADD,MG,N12_WF2,WindFarm Station 2;CB_Node11
+
+* Node 12
+
+ADD,PVG,PhotoVoltaic Station
+
+ADD,MG,N12_F,PhotoVoltaic Station;CB_Node12
+
+* Remotions
+
+* Components
+
+* Connections

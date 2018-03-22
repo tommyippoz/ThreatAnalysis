@@ -1,0 +1,40 @@
+* Additions
+
+* Node 1
+ADD,PP,N1DG4
+
+ADD,MG,N1_DG4,N1DG4;CB_Node1
+
+* Node 2
+ADD,PVG,N2DG4
+ADD,WF,WindFarm Station N2
+
+ADD,MG,N2_DG3,N2DG4;CB_Node2
+ADD,MG,N12_WFN2,WindFarm Station N2;CB_Node2
+
+* Node 7
+
+ADD,PVG,N7DG1
+ADD,PVG,N7PVG
+ADD,DES,N7_Storage
+
+ADD,MG,N7_DG,N7DG1;CB_Node7
+ADD,EC,N7_PVG,N7PVG;CB_Node7
+ADD,MG,N7_DES,N7_Storage;CB_Node7
+
+* Remotions
+
+* Node 1
+
+DEL,PVG,N1PVG
+
+* Node 2
+
+DEL,PVG,N2DG3
+DEL,PVG,N2PVG1
+
+* Node 3
+
+DEL,PVG,N3DG1
+
+
